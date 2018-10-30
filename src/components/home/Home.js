@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import styleSheet from './Home.css';
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -8,8 +9,9 @@ class Home extends Component {
     }
     render(){
         return (
-            <div>主页</div>
+            <div id="home"><div className="top">主页</div></div>
         )
     }
+    
 }
 export default Home;

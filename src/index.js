@@ -4,7 +4,7 @@ import './index.css';
 import 'antd-mobile/dist/antd-mobile.css';
 import { BrowserRouter as Router,Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
-import Login from './login/Login';
+import Login from './components/login/Login';
 const BasicExample = () => (
     <Router>
       <div style={{"width":"100%","height":"100%"}}>
