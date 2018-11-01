@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import Layout from '../layout/Layout';
+import Layout from '../mainlayout/Layout';
 class Login extends Component {
     constructor(props) {
         super(props);
