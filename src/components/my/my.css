@@ -1,0 +1,22 @@
+#my{
+
+}
+#my a{
+    color: #000;
+}
+#my .topInfo{
+    height: 1.07rem;background: #373945;padding: 0.12rem
+}
+#my .topInfo .imgBox{
+    border: 0.01rem solid #fff;float: left;width: 0.65rem;height: 0.65rem;margin-right: 0.12rem;
+}
+#my .topInfo img{
+    width: 0.64rem;
+}
+#my .word{
+    float: left;color: #fff;
+}
+#my p{margin: 0.12rem 0;}
+#my .word p:first-of-type span:first-of-type{
+    float: left;width: 0.42rem;height: 0.16rem;line-height: 0.16rem;text-align: center;background: #dfb077;font-size: 0.12rem;margin-right: 0.1rem
+}

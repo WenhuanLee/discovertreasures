@@ -17,9 +17,14 @@ class Layout extends Component {
     }
     
     componentDidMount(){
-        axios.post('https://www.ahiris.com/xulongtang/getBaseUserInfo?openId=o-lKY0-PINvDrZbGSzQNV8yomZ4',{openId:'o-lKY0-PINvDrZbGSzQNV8yomZ4c'}).then((res)=>{
-            console.log(res.data)
-        })
+      if(window.localStorage.getItem('tab')){
+          this.setState({
+            selectedTab:window.localStorage.getItem('tab')
+          })
+      }
+      axios.post('https://www.ahiris.com/xulongtang/getBaseUserInfo?openId=o-lKY0-PINvDrZbGSzQNV8yomZ4',{openId:'o-lKY0-PINvDrZbGSzQNV8yomZ4c'}).then((res)=>{
+        
+      })
 //      $.ajax({
 //          url:https://www.ahiris.com/xulongtang/getBaseUserInfo?openId=o-lKY0-PINvDrZbGSzQNV8yomZ4c,
 //          type:”post”,
@@ -66,6 +71,7 @@ class Layout extends Component {
                   this.setState({
                     selectedTab: 'redTab',
                   });
+                  window.localStorage.setItem('tab','redTab');
                 }}
                 data-seed="logId"
               >
@@ -93,6 +99,7 @@ class Layout extends Component {
                   this.setState({
                     selectedTab: 'blueTab',
                   });
+                  window.localStorage.setItem('tab','blueTab');
                 }}
                 data-seed="logId1"
               >
@@ -120,6 +127,7 @@ class Layout extends Component {
                   this.setState({
                     selectedTab: 'greenTab',
                   });
+                  window.localStorage.setItem('tab','greenTab');
                 }}
               >
                 <Discover />
@@ -134,9 +142,10 @@ class Layout extends Component {
                   this.setState({
                     selectedTab: 'yellowTab',
                   });
+                  window.localStorage.setItem('tab','yellowTab');
                 }}
               >
-                <My />
+                <My sendThis={this} />
               </TabBar.Item>
             </TabBar>
           </div>

@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './components/my/my.css'
 import 'antd-mobile/dist/antd-mobile.css';
 import { BrowserRouter as Router,Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
-import Login from './components/login/Login';
+import Login from './components/login/Login.jsx';
+import MyInfo from './components/my/MyInfo.jsx';
 const BasicExample = () => (
     <Router>
       <div style={{"width":"100%","height":"100%"}}>
           <Route exact path="/" component={Login}/>
           <Route path="/login" component={Login}/>
+          <Route path="/my/myInfo" component={MyInfo}/>
       </div>
     </Router>
 );

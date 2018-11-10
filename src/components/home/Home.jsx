@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
-import { PullToRefresh, ListView, Button } from 'antd-mobile';
+import { PullToRefresh, ListView } from 'antd-mobile';
 const data = [
   {
     img: 'https://zos.alipayobjects.com/rmsportal/dKbkpPXKfvZzWCM.png',
@@ -54,7 +54,7 @@ class Home extends Component {
   // }
 
   componentDidUpdate() {
-    
+     
   }
 
   componentDidMount() {
